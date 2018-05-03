@@ -7,11 +7,11 @@
 </head>
 <body>
 
-	<div class="panel panel-default">
+	<div class="panel panel-info">
 	  <div class="panel-heading">Panel Principal</div>
 	  <div class="panel-body">
 
-	  	<input type="text" id="resp1" name="resp1">
+	  	<input style="display: none" type="text" id="resp1" name="resp1">
 
 	    <div class="btn-group" role="group" aria-label="...">
 	        <button id="si" type="button" class="btn btn-success">Si</button>
@@ -24,18 +24,18 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#si").click(function(){
-				console.log("1");
 				$("#resp1").val('1');
+				$("div.panel").attr('class', 'panel panel-success');
 			});
 
 			$("#nada").click(function(){
-				console.log("100");
 				$('#resp1').val('100');
+				$("div.panel").attr('class', 'panel panel-info');
 			});
 
 			$("#no").click(function(){
-				console.log("0");
 				$('#resp1').val('0');
+				$("div.panel").attr('class', 'panel panel-danger');
 			});
 		});
 	</script>
